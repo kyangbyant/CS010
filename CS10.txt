@@ -1,0 +1,88 @@
+C＃企业级开发技术练习10答题卡
+
+班级：计算机信息管理一班
+姓名：陈正阳
+学号：20190307139
+
+*注：排除答案放置在序号下方。* /
+
+（一）
+使用系统；
+命名空间ConsoleApp1
+{
+         班级计划
+            {
+                    静态void Main（string [] args）
+                       {
+                            （long，decimal，float）num =（110L，220.2M，330.3f）;
+                             Console.WriteLine（num）;
+                             num.Item2 = 440.4m;
+                             Console.WriteLine（$“修改后，{nameof（num.Item2）}：{num.Item2}”）;
+                             var mix =（“ abc”，12.45,15，'a'）;
+                             Console.WriteLine（mix）;
+                             mix.Item4 ='b';
+                             Console.WriteLine（$“修改后，{nameof（mix.Item4）}：{mix.Item4}”））;
+                             （字符串名称，字符串课程，int分数）等级=（“ zhang”，“ php”，80）;
+                             Console.WriteLine（等级）;
+                              grade.score = 82;
+                             Console.WriteLine（$“修改后，{nameof（grade.score）}：{grade.score}”））;
+                             var employee =（name：“ wang”，pay：8765.43m，bonus：5432.1m）;
+                             Console.WriteLine（员工）;
+                             employee.pay = 9876.54m;
+                             Console.WriteLine（$“修改后，{nameof（employee.pay）}：{employee.pay}”）;
+                        }
+             }
+}
+
+（二）
+
+使用系统；
+使用System.Linq;
+使用System.Collections.Generic;
+命名空间ConsoleApp2
+{
+         班级计划
+            {
+                    静态void Main（string [] args）
+                       {
+                           （十进制cnt，十进制passCnt，十进制failCnt）Calc（List <十进制>得分）
+                               {
+                                   var c = score.Count（）;
+                                   var p = score.Count（p => p> = 60）;
+                                   var f = score.Count（f => f <60）;
+                                   返回（c，q，f）;
+                                }
+                             var r = Calc（new List <decimal> {80m，73.5m，20m，60.5m，59.5m}）;
+                             Console.WriteLine（r）;
+                             Console.WriteLine（$“人数：{r.cnt}，及格人数：{r.passCnt}，不及格人数：{r.failCnt}”）;
+                        }
+             }
+}
+
+
+（三）
+使用系统；
+命名空间ConsoleApp2
+{
+         班级计划
+            {
+                    静态void Main（string [] args）
+                       {
+                              （整数，T最大）Calc <T>（参数T [] num）其中T：IComparable
+                                {
+                                       var n = num.Length;
+                                       如果（n == 0）返回（n，default（T））; ;
+                                       var max = num [0];
+                                       foreach（数字中的var i）
+                                         {
+                                              if（i.CompareTo（max）> 0）max = i;
+                                         }
+                                        返回（n，max）;
+                                 }
+                                var r1 = Calc（3.5f，4.3f，6.2f，1.7f，5.6f）;
+                                Console.WriteLine（$“元素个数：{r1.count}，副本：{r1.max}”）；
+                                var r2 = Calc（'a'，'f'，'z'，'x'）;
+                                Console.WriteLine（$“元素个数：{r2.count}，副本：{r2.max}”）；
+                        }
+             }
+}
